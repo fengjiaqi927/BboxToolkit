@@ -79,6 +79,7 @@ def parse_args():
     add_parser(parser)
     args = parser.parse_args()
 
+
     if args.base_json is not None:
         with open(args.base_json, 'r') as f:
             prior_config = json.load(f)
@@ -106,6 +107,10 @@ def parse_args():
     assert args.save_ext in bt.img_exts
     assert args.iof_thr >= 0 and args.iof_thr < 1
     assert args.iof_thr >= 0 and args.iof_thr <= 1
+    # temp for debug
+    if osp.exists(args.save_dir):
+        temp_order = "rm -r {}".format(args.save_dir)
+        os.system(temp_order)
     assert not osp.exists(args.save_dir), \
             f'{osp.join(args.save_dir)} already exists'
     args.save_dir = abspath(args.save_dir)

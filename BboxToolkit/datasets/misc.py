@@ -42,6 +42,21 @@ dataset_classes = {
     'VOC': ('person', 'bird', 'cat', 'cow', 'dog', 'horse', 'sheep', 'aeroplane',
             'bicycle', 'boat', 'bus', 'car', 'motorbike', 'train', 'bottle',
             'chair', 'diningtable', 'pottedplant', 'sofa', 'tvmonitor'),
+    # add new dataset to BBox
+    'ISPRS': (
+        # 'Ship': 
+            'Passenger Ship', 'Motorboat', 'Fishing Boat', 'Tugboat', 'other-ship',
+                   'Engineering Ship', 'Liquid Cargo Ship', 'Dry Cargo Ship', 'Warship',
+        # 'Vehicle': 
+            'Small Car', 'Bus', 'Cargo Truck', 'Dump Truck', 'other-vehicle',
+                      'Van', 'Trailer', 'Tractor', 'Excavator', 'Truck Tractor',
+        #'Airplane': 
+            'Boeing737', 'Boeing747', 'Boeing777', 'Boeing787', 'ARJ21',
+                       'C919', 'A220', 'A321', 'A330', 'A350', 'other-airplane',
+        #'Court': 
+            'Baseball Field', 'Basketball Court', 'Football Field', 'Tennis Court',
+        #'Road': 
+            'Roundabout', 'Intersection', 'Bridge')
 }
 
 dataset_aliases = {
@@ -56,6 +71,7 @@ dataset_aliases = {
     'RCTW_17': ['rctw_17', 'RCTW_17', 'rctw-17', 'RCTW-17'],
     'SynthText': ['synthtext', 'SynthText'],
     'VOC': ['VOC', 'voc'],
+    'ISPRS': ['ISPRS']
 }
 
 img_exts = ['.jpg', '.JPG', '.png', '.tif', '.bmp']
