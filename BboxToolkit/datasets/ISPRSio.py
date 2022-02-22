@@ -42,7 +42,7 @@ def load_isprs(img_dir, ann_dir, classes=None, img_keys=None, obj_keys=None, npr
     end_time = time.time()
     print(f'Finishing loading ISPRS, get {len(contents)} images,',
           f'using {end_time-start_time:.3f}s.')
-    return contents, ['ship']
+    return contents, classes
 
 
 def _load_isprs_single(imgfile, img_dir, ann_dir, img_keys, obj_keys, cls2lbl):
