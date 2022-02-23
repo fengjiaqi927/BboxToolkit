@@ -2,10 +2,10 @@
     "nproc": 20,
     "load_type": "isprs",
     "img_dirs": [
-        "/home/fengjq/workspace/xtb_dataset/train/images/"
+        "/home/fengjq/workspace/test_for_code/data/isprs/images/"
     ],
     "ann_dirs": [
-        "/home/fengjq/workspace/xtb_dataset/train/labelXml/"
+        "/home/fengjq/workspace/test_for_code/data/isprs/labelXml/"
     ],
     "classes": null,
     "prior_annfile": null,
@@ -26,6 +26,6 @@
         104, 116, 124
     ],
     "filter_empty": true,
-    "save_dir": "/home/fengjq/workspace/xtb_dataset/split_isprs_train/",
+    "save_dir": "/home/fengjq/workspace/test_for_code/data/split_ss_isprs/train/",
     "save_ext": ".png"
 }

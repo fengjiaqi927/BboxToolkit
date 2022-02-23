@@ -105,7 +105,9 @@ def _load_isprs_xml(xmlfile, img_keys, obj_keys, cls2lbl):
                 points.append(float(point_y))
             assert points[0] == points[8] , f'load poly_x error'
             assert points[1] == points[9] , f'load poly_y error'
+            
             polys.append(points[:8])
+
             bboxes.append(bt.poly2obb(np.array(points[:8])))
 
 

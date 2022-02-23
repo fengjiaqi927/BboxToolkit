@@ -108,9 +108,9 @@ def parse_args():
     assert args.iof_thr >= 0 and args.iof_thr < 1
     assert args.iof_thr >= 0 and args.iof_thr <= 1
     # temp for debug
-    if osp.exists(args.save_dir):
-        temp_order = "rm -r {}".format(args.save_dir)
-        os.system(temp_order)
+    # if osp.exists(args.save_dir):
+    #     temp_order = "rm -r {}".format(args.save_dir)
+    #     os.system(temp_order)
     assert not osp.exists(args.save_dir), \
             f'{osp.join(args.save_dir)} already exists'
     args.save_dir = abspath(args.save_dir)
@@ -228,7 +228,8 @@ def single_split(arguments, sizes, gaps, img_rate_thr, iof_thr, no_padding,
     window_anns = get_window_obj(info, windows, iof_thr)
     patch_infos = crop_and_save_img(info, windows, window_anns, img_dir, no_padding,
                                     padding_value, filter_empty, save_dir, img_ext)
-    assert patch_infos or (filter_empty and info['ann']['bboxes'].size == 0)
+    
+    assert patch_infos or (filter_empty and info['ann']['bboxes'].size == 0) , "{},{},{},{}".format(patch_infos,filter_empty,info['ann']['bboxes'].size,info['filename'])
 
     lock.acquire()
     prog.value += 1
