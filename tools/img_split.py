@@ -108,9 +108,9 @@ def parse_args():
     assert args.iof_thr >= 0 and args.iof_thr < 1
     assert args.iof_thr >= 0 and args.iof_thr <= 1
     # temp for debug
-    # if osp.exists(args.save_dir):
-    #     temp_order = "rm -r {}".format(args.save_dir)
-    #     os.system(temp_order)
+    if osp.exists(args.save_dir):
+        temp_order = "rm -r {}".format(args.save_dir)
+        os.system(temp_order)
     assert not osp.exists(args.save_dir), \
             f'{osp.join(args.save_dir)} already exists'
     args.save_dir = abspath(args.save_dir)
