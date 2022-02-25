@@ -1,0 +1,25 @@
+{
+    "load_type": "pkl",
+    "img_dir": "/home/fengjq/workspace/xtb_dataset/split_isprs_train/images/",
+    "ann_dir": "/home/fengjq/workspace/xtb_dataset/split_isprs_train/annfiles/patch_annfile.pkl",
+    "classes": "ISPRS",
+    "prior_annfile": null,
+    "merge_type": "addition",
+    "load_nproc": 10,
+
+    "skip_empty": false,
+    "random_vis": false,
+    "ids": null,
+    "show_off": true,
+    "save_dir": "/home/fengjq/workspace/xtb_dataset/split_isprs_train/visualization/",
+    "vis_nproc": 10,
+
+    "shown_btype": null,
+    "shown_names": "/home/fengjq/workspace/OBBDetection/BboxToolkit/tools/vis_configs/isprs/short_name.txt",
+    "score_thr": 0.2,
+    "colors": "/home/fengjq/workspace/OBBDetection/BboxToolkit/tools/vis_configs/isprs/colors.txt",
+    "thickness": 3.0,
+    "text_off": false,
+    "font_size": 10,
+    "wait_time": 0
+}
